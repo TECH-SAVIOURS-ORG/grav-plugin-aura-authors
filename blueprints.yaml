@@ -50,7 +50,7 @@ form:
           size: large
           label: Taxonomy Label
           validate:
-            pattern: "[a-z][a-z0-9_\-]+"
+            pattern: "[a-z][a-zA-Z0-9]*$"
             message: "Use all lowercase letters and replace spaces with hyphens."
             required: true
         .image:
@@ -61,10 +61,39 @@ form:
           destination: 'user/images'
           accept:
             - image/*
-        .description:
+        .description.en:
           type: textarea
           size: long
-          label: Description
+          label: Description English
+        .description.de:
+          type: textarea
+          size: long
+          label: Description German
+        .person-mastodon-url:
+          type: text
+          size: large
+          label: Mastodon URL
+          placeholder: 'https://fosstodon.org/@techsaviours'
+        .person-matrix-org-url:
+          type: text
+          size: large
+          label: Matrix URL
+          placeholder: 'https://chat.techsaviours.org/#/user/@user:techsaviours.org'
+        .person-gitea-url:
+          type: text
+          size: large
+          label: Gitea URL
+          placeholder: 'https://git.techsaviours.org/user'
+        .person-github-url:
+          type: text
+          size: large
+          label: GitHub URL
+          placeholder: 'https://github.com/user'
+        .person-envelope-user:
+          type: text
+          size: large
+          label: Email Address
+          placeholder: 'user@techsaviours.org'
         .person-facebook-url:
           type: text
           size: large
