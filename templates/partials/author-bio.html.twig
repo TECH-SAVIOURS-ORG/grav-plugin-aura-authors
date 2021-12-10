@@ -7,6 +7,12 @@
         'instagram',
         'pinterest',
         'website',
+        'envelope',
+        'mastodon',
+        'matrix-org',
+        'gitea',
+        'github',
+        'globe',
     ] %}
 <div class="author-bio">
     <p class="author-heading">About the author</p>
@@ -21,25 +27,28 @@
             </div>
             <div class="author-social">
                 <ul>
+            {% if author['person-envelope-user'] %}
+                    <li><a href="mailto:{{ author['person-envelope-user'] }}"><i class="fa fa-at"></i></a></li>
+            {% endif %}
             {% for item in social %}
                 {% set href = author['person-' ~ item ~ '-url'] %}
                 {% if href %}
-                    <li><a href="{{ href }}" target="_blank"><span class="aura-icon-{{ item }}"></span></a></li>
+                    <li><a href="{{ href }}" target="_blank"><i class="fa fa-{{ item }}"></i></a></li>
                 {% endif %}
             {% endfor %}
             {% if author['person-twitter-user'] %}
-                    <li><a href="https://twitter.com/{{ author['person-twitter-user'] }}" target="_blank"><span class="aura-icon-twitter"></span></a></li>
-            {% endif %}
+                    <li><a href="https://twitter.com/{{ author['person-twitter-user'] }}" target="_blank"><i class="aura-icon-twitter"></i></a></li>
+                {% endif %}
                 </ul>&nbsp;
             </div>
             <div class="clear-right"></div>
         </div>
         <div class="author-description">
-            <p>{{ author.description }}</p>
+            <p>{{ author.description.en }}</p>
         </div>
     </div>
 </div>
     {% if config.plugins['aura-authors']['include-css'] %}
         {% do assets.addCss('user://plugins/aura-authors/assets/style.min.css') %}
     {% endif %}
-{% endif %}
+{% endif %} 
