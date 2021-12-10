@@ -2,10 +2,10 @@
 This plugin supports multi-author, *multi-language (hardcoded) and adds additional media accounts (Matrix, Mastodon, Gitea, Github) and email.
 
 The icons are based on [forkaweso.me](https://forkaweso.me/Fork-Awesome/icons/).  
-Just [download the icon package](https://forkaweso.me/Fork-Awesome/get-started/) for your theme and add it to your `base.html.twig` file `{% do assets.addCss('theme://css/fork-awesome.min.css', 100) %}` under `{% block stylesheets %}`.
+Just [download the icon package](https://forkaweso.me/Fork-Awesome/get-started/) for your theme and add to your `base.html.twig` file `{% do assets.addCss('theme://css/fork-awesome.min.css', 100) %}` under `{% block stylesheets %}`.
 
 (*) Multi-language is hardcoded (en, de) and a quick solution for [our news](https://techsaviours.org/news/) that we recently launched.  
-Add your language code in [line 47](https://github.com/TECH-SAVIOURS-ORG/grav-plugin-aura-authors/blob/7716ae9c481bbed5222d245812fd5879a029b9bd/templates/partials/author-bio.html.twig#L47) and add a new [description](https://github.com/TECH-SAVIOURS-ORG/grav-plugin-aura-authors/blob/7716ae9c481bbed5222d245812fd5879a029b9bd/blueprints.yaml#L64-L67) field to `blueprints.yaml`.  
+Add your language code in [line 47](https://github.com/TECH-SAVIOURS-ORG/grav-plugin-aura-authors/blob/6c66baf37fe8a6f75d86c033fc5e9dbd54787033/templates/partials/author-bio.html.twig#L47) and add a new [description](https://github.com/TECH-SAVIOURS-ORG/grav-plugin-aura-authors/blob/6c66baf37fe8a6f75d86c033fc5e9dbd54787033/blueprints.yaml#L64-L71) field to `blueprints.yaml`.  
 See also [Multi-Language](https://learn.getgrav.org/17/content/multi-language).
 
 The plugin is no longer maintained for years.  
